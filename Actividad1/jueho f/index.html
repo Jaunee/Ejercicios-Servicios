@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Adivinar el Número</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        /* Quitar flechas en navegadores WebKit (Chrome, Safari, Edge) */
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Quitar flechas en Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌸 ¡Guess the number! 🌸</h1>
+        <p>Enter a  number betwen  0 and 10:</p>
+        <input type="number" id="userGuess" min="0" max="10">
+        <br>
+        <button onclick="checkGuess()">guess</button>
+        <p id="message"></p>
+        <button onclick="restartGame()">Reset</button>
+    </div>
+
+    <script src="juego.js"></script>
+ 
+</body>
+</html>
